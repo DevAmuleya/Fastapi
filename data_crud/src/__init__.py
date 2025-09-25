@@ -1,7 +1,7 @@
 from fastapi import FastAPI
-from src.books.routes import book_router
-from contextlib import asynccontextmanager
 from src.db.main import init_db
+from contextlib import asynccontextmanager
+from src.books.routes import book_router
 
 
 @asynccontextmanager
@@ -23,7 +23,6 @@ app = FastAPI(
     description="A simple CRUD webserver built with FastAPI",
     version=version,
     lifespan=lifespan,
-    contact={"name": "DevAmuleya", "email": "abdulganiyua723@gmail.com"},
 )
 
 
