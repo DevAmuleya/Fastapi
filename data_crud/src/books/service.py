@@ -15,7 +15,6 @@ class BookService:
         results = await session.exec(statement)
         return results.first()
 
-    from src.books.model import Book
 
     async def create_book(self, session, book_data: BookCreateModel) -> Book:
         book_data_dict = book_data.model_dump()
